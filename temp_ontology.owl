@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5"
+         xmlns="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5"/>
+
+<owl:ObjectProperty rdf:about="#aPourIngredient">
+  <owl:inverseOf rdf:resource="#estContenuDans"/>
+  <rdfs:domain rdf:resource="#Recette"/>
+  <rdfs:range rdf:resource="#Ingredient"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estContenuDans">
+  <rdfs:domain rdf:resource="#Ingredient"/>
+  <rdfs:range rdf:resource="#Recette"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aRestriction">
+  <rdfs:domain rdf:resource="#Utilisateur"/>
+  <rdfs:range rdf:resource="#ProfilAlimentaire"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estCompatibleAvec">
+  <rdfs:domain rdf:resource="#Recette"/>
+  <rdfs:range rdf:resource="#ProfilAlimentaire"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#exclutIngredient">
+  <rdfs:domain rdf:resource="#ProfilAlimentaire"/>
+  <rdfs:range rdf:resource="#Ingredient"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Recette"/>
+
+<owl:Class rdf:about="#Ingredient"/>
+
+<owl:Class rdf:about="#Utilisateur"/>
+
+<owl:Class rdf:about="#ProfilAlimentaire"/>
+
+<owl:Class rdf:about="#Allergie">
+  <rdfs:subClassOf rdf:resource="#ProfilAlimentaire"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cereale">
+  <rdfs:subClassOf rdf:resource="#ProduitVegetal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProduitVegetal">
+  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CerealeAvecGluten">
+  <rdfs:subClassOf rdf:resource="#Cereale"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fruit">
+  <rdfs:subClassOf rdf:resource="#ProduitVegetal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Legumineuse">
+  <rdfs:subClassOf rdf:resource="#ProduitVegetal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Oeuf">
+  <rdfs:subClassOf rdf:resource="#ProduitAnimal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProduitAnimal">
+  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Oleagineux">
+  <rdfs:subClassOf rdf:resource="#ProduitVegetal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProduitLaitier">
+  <rdfs:subClassOf rdf:resource="#ProduitAnimal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProduitMarin">
+  <rdfs:subClassOf rdf:resource="#ProduitAnimal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RecetteCarnee">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Recette"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#aPourIngredient"/>
+          <owl:someValuesFrom rdf:resource="#Viande"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Recette"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Viande">
+  <rdfs:subClassOf rdf:resource="#ProduitAnimal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RecetteSansGluten">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Recette"/>
+        <owl:Class>
+          <owl:complementOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#aPourIngredient"/>
+              <owl:someValuesFrom rdf:resource="#CerealeAvecGluten"/>
+            </owl:Restriction>
+          </owl:complementOf>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Recette"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RecetteVegane">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Recette"/>
+        <owl:Class>
+          <owl:complementOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#aPourIngredient"/>
+              <owl:someValuesFrom rdf:resource="#ProduitAnimal"/>
+            </owl:Restriction>
+          </owl:complementOf>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Recette"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RecetteVegetarienne">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Recette"/>
+        <owl:Class>
+          <owl:complementOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#aPourIngredient"/>
+              <owl:someValuesFrom>
+                <owl:Class>
+                  <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ProduitMarin"/>
+                    <rdf:Description rdf:about="#Viande"/>
+                  </owl:unionOf>
+                </owl:Class>
+              </owl:someValuesFrom>
+            </owl:Restriction>
+          </owl:complementOf>
+        </owl:Class>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Recette"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Regime">
+  <rdfs:subClassOf rdf:resource="#ProfilAlimentaire"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#boeuf">
+  <rdf:type rdf:resource="#Viande"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#carnivore">
+  <rdf:type rdf:resource="#Recette"/>
+  <aPourIngredient rdf:resource="#boeuf"/>
+  <aPourIngredient rdf:resource="#poulet"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#petitpoids">
+  <rdf:type rdf:resource="#Legumineuse"/>
+  <estContenuDans rdf:resource="#salade"/>
+  <estContenuDans rdf:resource="#saladechevre"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#salade">
+  <rdf:type rdf:resource="#Recette"/>
+  <aPourIngredient rdf:resource="#pomme"/>
+  <aPourIngredient rdf:resource="#tomate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#saladechevre">
+  <rdf:type rdf:resource="#Recette"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pomme">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#poulet">
+  <rdf:type rdf:resource="#Viande"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tomate">
+  <rdf:type rdf:resource="#Fruit"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#fromage">
+  <rdf:type rdf:resource="#ProduitLaitier"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#saladeFrom">
+  <rdf:type rdf:resource="#Recette"/>
+  <aPourIngredient rdf:resource="#tomate"/>
+  <aPourIngredient rdf:resource="#fromage"/>
+  <aPourIngredient rdf:resource="#pomme"/>
+  <aPourIngredient rdf:resource="#petitpoids"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#aPourIngredient"/>
+      <owl:allValuesFrom>
+        <owl:Class>
+          <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="#tomate"/>
+            <rdf:Description rdf:about="#fromage"/>
+            <rdf:Description rdf:about="#pomme"/>
+            <rdf:Description rdf:about="#petitpoids"/>
+          </owl:oneOf>
+        </owl:Class>
+      </owl:allValuesFrom>
+    </owl:Restriction>
+  </rdf:type>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

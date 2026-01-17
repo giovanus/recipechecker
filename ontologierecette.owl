@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aPourIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aPourIngredient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#estContenuDans"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aRestriction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProfilAlimentaire"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#estCompatibleAvec -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#estCompatibleAvec">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProfilAlimentaire"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#estContenuDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#estContenuDans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#exclutIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#exclutIngredient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProfilAlimentaire"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Allergie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Allergie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProfilAlimentaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Cereale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Cereale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitVegetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#CerealeAvecGluten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#CerealeAvecGluten">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Cereale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Fruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitVegetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Ingredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Legumineuse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Legumineuse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitVegetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Oeuf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Oeuf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Oleagineux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Oleagineux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitVegetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitAnimal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitAnimal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitLaitier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitLaitier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitMarin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitMarin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitVegetal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitVegetal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProfilAlimentaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProfilAlimentaire"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteCarnee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteCarnee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aPourIngredient"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Viande"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteSansGluten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteSansGluten">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aPourIngredient"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#CerealeAvecGluten"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteVegane -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteVegane">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aPourIngredient"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitAnimal"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteVegetarienne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#RecetteVegetarienne">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#aPourIngredient"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitMarin"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Viande"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Regime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Regime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProfilAlimentaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Utilisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Utilisateur"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Viande -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Viande">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#ProduitAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#boeuf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#boeuf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Viande"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#carnivore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#carnivore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+        <aPourIngredient rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#boeuf"/>
+        <aPourIngredient rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#poulet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#petitpoids -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#petitpoids">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Legumineuse"/>
+        <estContenuDans rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#salade"/>
+        <estContenuDans rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#saladechevre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#pomme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#pomme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#poulet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#poulet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Viande"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#salade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#salade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+        <aPourIngredient rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#pomme"/>
+        <aPourIngredient rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#tomate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#saladechevre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#saladechevre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Recette"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#tomate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#tomate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lary/ontologies/2026/0/untitled-ontology-5#Fruit"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
