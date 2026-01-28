@@ -168,13 +168,13 @@ def get_inferred_types(recette, onto):
         has_gluten = any(isinstance(ing, onto.CerealeAvecGluten) for ing in ingredients)
         
         if has_meat:
-            types.append("🥩 CarnéeL")
+            types.append("🥩 Carnée")
         if not has_animal:
-            types.append("🌱 VéganeL")
+            types.append("🌱 Végane")
         if not has_meat_or_fish:
-            types.append("🥗 VégétarienneL")
+            types.append("🥗 Végétarienne")
         if not has_gluten:
-            types.append("🌾 Sans GlutenL")
+            types.append("🌾 Sans Gluten")
     
     return types
 
